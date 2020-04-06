@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/anonymous-project-frontend/static/css/main.46039ddf.chunk.css",
+    "main.js": "/anonymous-project-frontend/static/js/main.69ea4e63.chunk.js",
+    "main.js.map": "/anonymous-project-frontend/static/js/main.69ea4e63.chunk.js.map",
+    "runtime-main.js": "/anonymous-project-frontend/static/js/runtime-main.a40f67ce.js",
+    "runtime-main.js.map": "/anonymous-project-frontend/static/js/runtime-main.a40f67ce.js.map",
+    "static/js/2.2964d9e0.chunk.js": "/anonymous-project-frontend/static/js/2.2964d9e0.chunk.js",
+    "static/js/2.2964d9e0.chunk.js.map": "/anonymous-project-frontend/static/js/2.2964d9e0.chunk.js.map",
+    "index.html": "/anonymous-project-frontend/index.html",
+    "precache-manifest.ba7b6d6ec289acc4ba56df0e097c890a.js": "/anonymous-project-frontend/precache-manifest.ba7b6d6ec289acc4ba56df0e097c890a.js",
+    "service-worker.js": "/anonymous-project-frontend/service-worker.js",
+    "static/css/main.46039ddf.chunk.css.map": "/anonymous-project-frontend/static/css/main.46039ddf.chunk.css.map",
+    "static/js/2.2964d9e0.chunk.js.LICENSE.txt": "/anonymous-project-frontend/static/js/2.2964d9e0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a40f67ce.js",
+    "static/js/2.2964d9e0.chunk.js",
+    "static/css/main.46039ddf.chunk.css",
+    "static/js/main.69ea4e63.chunk.js"
+  ]
+}
