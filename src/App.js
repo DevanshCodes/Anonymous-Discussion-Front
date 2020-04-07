@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch,HashRouter } from "react-router-dom";
 import home from "./home/home"
 import discussion from "./discussion/discussion"
 import './App.css';
 
 const Router = () => (
-  <BrowserRouter>
+  <HashRouter basename='/'>
     <Switch>
       <Route exact path="/" component={home} />
       <Route exact path="/:username" component={discussion} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 )
 
 function App() {

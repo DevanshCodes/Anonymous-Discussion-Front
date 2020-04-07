@@ -35,3 +35,14 @@ h1 {
         }
     }
 }
+.form{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    .textfield{
+        flex: 1 1 auto;
+        min-width: auto;
+    }
+    .Submit{
+    }
+}
