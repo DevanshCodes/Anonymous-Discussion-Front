@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import "./home.scss";
-import { Card, CardContent, Container, Avatar, TextField, Button, Input } from '@material-ui/core';
+import { Card, CardContent, Container, Avatar, Button, Input } from '@material-ui/core';
 
 class Home extends Component {
     constructor(props) {
