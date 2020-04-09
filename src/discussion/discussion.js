@@ -3,13 +3,13 @@ import "./discussion.scss";
 import socketIOClient from "socket.io-client";
 import { Paper, Container, Button, Input } from '@material-ui/core';
 var socket;
+
 class Discussion extends Component {
     constructor(props) {
         super(props);
         this.state = {
             endpoint: "http://localhost:4000",
             message: '',
-            socket: '',
             messages: [
                 {
                     username: '',
@@ -18,9 +18,15 @@ class Discussion extends Component {
             ],
 
         };
-        socket = socketIOClient(this.state.endpoint)
+        socket = socketIOClient.connect(this.state.endpoint)
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        socket.on('newChat', async (data) => {
+            var tmessages = this.state.messages;
+            tmessages.push({ username: data.username, chat: data.chat })
+            this.setState({ messages: tmessages });
+            
+        })
 
     }
 
@@ -33,6 +39,11 @@ class Discussion extends Component {
             });
     }
 
+    componentDidUpdate() {
+        const objDiv = document.getElementById('chatscroll');
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+
     handleChange(event) {
         this.setState({ message: event.target.value })
     }
@@ -41,9 +52,8 @@ class Discussion extends Component {
         var tmessages = this.state.messages;
         var nmessage = { username: this.props.match.params.username, chat: this.state.message }
         socket.emit("newMessage", nmessage);
-        tmessages.push({ username: this.props.match.params.username, chat: this.state.message });
-        this.setState({ messages: tmessages })
         this.setState({ message: "" })
+
     }
 
     render() {
@@ -51,7 +61,7 @@ class Discussion extends Component {
             <div className='main'>
                 <Container maxWidth="lg">
                     <h1>Anonymous Discussion!</h1>
-                    <div className="paper"> <Paper variant="outlined" className="paper">
+                    <div> <Paper variant="outlined" className="paper" id="chatscroll">
                         {this.state.messages.map(i => {
                             return (
                                 <div className="chat">
@@ -61,11 +71,11 @@ class Discussion extends Component {
                                         <div className="chatText"> {i.chat} </div> </div>
                                 </div>)
                         })}
-                        <form className="form" >
+                    </Paper> </div>
+                    <form className="form" >
                             <div><Input type="text" value={this.state.message} id="inputText" onChange={this.handleChange} /></div>
                             <Button className="Submit" type="submit" value="Submit" variant="contained" color="primary" onClick={this.handleSubmit}> Submit </Button>
                         </form>
-                    </Paper> </div>
                 </Container>
             </div>
         )

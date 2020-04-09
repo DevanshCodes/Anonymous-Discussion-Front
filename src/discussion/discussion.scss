@@ -13,8 +13,9 @@ h1 {
 }
 
 .paper {
-    height: 80vh;
+    height: 65vh;
     margin-bottom: 20px;
+    overflow-y: scroll;
 }
 
 .chat {
@@ -37,7 +38,6 @@ h1 {
 }
 .form {
     display: flex;
-    flex: 1 1 auto;
     flex-direction: row;
     .textfield {
         flex: 1 1 auto;
