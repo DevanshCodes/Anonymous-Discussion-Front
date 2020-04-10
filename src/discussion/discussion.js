@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "./discussion.scss";
 import socketIOClient from "socket.io-client";
-import { Paper, Container, Button, Input } from '@material-ui/core';
+import { Paper, Container} from '@material-ui/core';
+import { Button, InputGroup, FormControl } from 'react-bootstrap';
+
 var socket;
 
 class Discussion extends Component {
@@ -25,7 +27,7 @@ class Discussion extends Component {
             var tmessages = this.state.messages;
             tmessages.push({ username: data.username, chat: data.chat })
             this.setState({ messages: tmessages });
-            
+
         })
 
     }
@@ -42,14 +44,13 @@ class Discussion extends Component {
     componentDidUpdate() {
         const objDiv = document.getElementById('chatscroll');
         objDiv.scrollTop = objDiv.scrollHeight;
-      }
+    }
 
     handleChange(event) {
         this.setState({ message: event.target.value })
     }
 
     handleSubmit(event) {
-        var tmessages = this.state.messages;
         var nmessage = { username: this.props.match.params.username, chat: this.state.message }
         socket.emit("newMessage", nmessage);
         this.setState({ message: "" })
@@ -72,10 +73,20 @@ class Discussion extends Component {
                                 </div>)
                         })}
                     </Paper> </div>
-                    <form className="form" >
-                            <div><Input type="text" value={this.state.message} id="inputText" onChange={this.handleChange} /></div>
-                            <Button className="Submit" type="submit" value="Submit" variant="contained" color="primary" onClick={this.handleSubmit}> Submit </Button>
-                        </form>
+                    <form>
+                    <InputGroup className="mb-3">
+                        <FormControl
+                            value={this.state.message}
+                            onChange={this.handleChange}
+                            placeholder="Chat Message"
+                            aria-label="Recipient's username"
+                            aria-describedby="basic-addon2"
+                        />
+                        <InputGroup.Append>
+                            <Button variant="outline-secondary" onClick={this.handleSubmit} className="submit" type="submit">Submit</Button>
+                        </InputGroup.Append>
+                    </InputGroup>
+                    </form>
                 </Container>
             </div>
         )
