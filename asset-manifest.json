@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/anonymous-project-frontend/static/css/main.b883ee46.chunk.css",
-    "main.js": "/anonymous-project-frontend/static/js/main.aeb2eca1.chunk.js",
-    "main.js.map": "/anonymous-project-frontend/static/js/main.aeb2eca1.chunk.js.map",
-    "runtime-main.js": "/anonymous-project-frontend/static/js/runtime-main.a40f67ce.js",
-    "runtime-main.js.map": "/anonymous-project-frontend/static/js/runtime-main.a40f67ce.js.map",
-    "static/js/2.d6adc57d.chunk.js": "/anonymous-project-frontend/static/js/2.d6adc57d.chunk.js",
-    "static/js/2.d6adc57d.chunk.js.map": "/anonymous-project-frontend/static/js/2.d6adc57d.chunk.js.map",
+    "main.css": "/anonymous-project-frontend/static/css/main.2e4387e9.chunk.css",
+    "main.js": "/anonymous-project-frontend/static/js/main.bc10d926.chunk.js",
+    "main.js.map": "/anonymous-project-frontend/static/js/main.bc10d926.chunk.js.map",
+    "runtime-main.js": "/anonymous-project-frontend/static/js/runtime-main.b6c2b54f.js",
+    "runtime-main.js.map": "/anonymous-project-frontend/static/js/runtime-main.b6c2b54f.js.map",
+    "static/css/2.de424728.chunk.css": "/anonymous-project-frontend/static/css/2.de424728.chunk.css",
+    "static/js/2.93563ccc.chunk.js": "/anonymous-project-frontend/static/js/2.93563ccc.chunk.js",
+    "static/js/2.93563ccc.chunk.js.map": "/anonymous-project-frontend/static/js/2.93563ccc.chunk.js.map",
     "index.html": "/anonymous-project-frontend/index.html",
-    "precache-manifest.d325076757a3bd23bba69f81b428c779.js": "/anonymous-project-frontend/precache-manifest.d325076757a3bd23bba69f81b428c779.js",
+    "precache-manifest.05e41806743c0f004878759282e9e090.js": "/anonymous-project-frontend/precache-manifest.05e41806743c0f004878759282e9e090.js",
     "service-worker.js": "/anonymous-project-frontend/service-worker.js",
-    "static/css/main.b883ee46.chunk.css.map": "/anonymous-project-frontend/static/css/main.b883ee46.chunk.css.map",
-    "static/js/2.d6adc57d.chunk.js.LICENSE.txt": "/anonymous-project-frontend/static/js/2.d6adc57d.chunk.js.LICENSE.txt"
+    "static/css/2.de424728.chunk.css.map": "/anonymous-project-frontend/static/css/2.de424728.chunk.css.map",
+    "static/css/main.2e4387e9.chunk.css.map": "/anonymous-project-frontend/static/css/main.2e4387e9.chunk.css.map",
+    "static/js/2.93563ccc.chunk.js.LICENSE.txt": "/anonymous-project-frontend/static/js/2.93563ccc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a40f67ce.js",
-    "static/js/2.d6adc57d.chunk.js",
-    "static/css/main.b883ee46.chunk.css",
-    "static/js/main.aeb2eca1.chunk.js"
+    "static/js/runtime-main.b6c2b54f.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.93563ccc.chunk.js",
+    "static/css/main.2e4387e9.chunk.css",
+    "static/js/main.bc10d926.chunk.js"
   ]
 }
