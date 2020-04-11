@@ -35,7 +35,7 @@ class Discussion extends Component {
 
     componentDidMount() {
         const { match: { params } } = this.props;
-        fetch(`http://localhost:4000/api/chats/${params.roomno}`)
+        fetch(`https://anonymous-project-backend.herokuapp.com/api/chats/${params.roomno}`)
             .then(response => response.json())
             .then((data) => {
                 console.log(data);
