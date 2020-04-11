@@ -10,7 +10,7 @@ class Discussion extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            endpoint: "http://localhost:4000",
+            endpoint: "https://anonymous-project-backend.herokuapp.com:4000",
             message: '',
             messages: [
                 {
