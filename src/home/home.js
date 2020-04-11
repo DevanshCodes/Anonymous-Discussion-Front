@@ -1,20 +1,27 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import "./home.scss";
-import { Card, CardContent, Container, Avatar, Button, Input } from '@material-ui/core';
+import { Card, CardContent, Container, Avatar, Input } from '@material-ui/core';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, InputGroup, FormControl } from 'react-bootstrap';
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
             username: '',
+            roomno: ''
 
         };
-        this.handleChange = this.handleChange.bind(this)
+        this.handleChangeusername = this.handleChangeusername.bind(this)
+        this.handleChangeroomno = this.handleChangeroomno.bind(this);
     }
 
-    handleChange(event) {
+    handleChangeusername(event) {
         this.setState({ username: event.target.value })
+    }
+    handleChangeroomno(event) {
+        this.setState({ roomno: event.target.value })
     }
 
     render() {
@@ -25,11 +32,30 @@ class Home extends Component {
                 </Container>
                 <Card className="Card">
                     <CardContent className="content">
-                        <div className="greeting">Enter a Username to get Started</div>
+                        <div className="greeting">Let's Get Started!</div>
                         <div><Avatar className="avatar"></Avatar></div>
                         <form className="form">
-                            <Input type="text" value={this.state.username} id="inputText" onChange={this.handleChange} />
-                            <Link to={`${this.state.username}`}><Button className="Submit" type="submit" value="Submit" variant="contained" color="primary"> Submit </Button></Link>
+                            <InputGroup className="mb-3" type="text" value={this.state.username} id="inputText" onChange={this.handleChangeusername}>
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl
+                                    placeholder="Username"
+                                    aria-label="Username"
+                                    aria-describedby="basic-addon1"
+                                />
+                            </InputGroup>
+                            <InputGroup className="mb-3" type="text" value={this.state.roomno} id="inputText" onChange={this.handleChangeroomno}>
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="basic-addon1">#</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl
+                                    placeholder="RoomID"
+                                    aria-label="Username"
+                                    aria-describedby="basic-addon1"
+                                />
+                            </InputGroup>
+                            <Link to={`${this.state.username}/${this.state.roomno}`}><Button className="Submit" type="submit" value="Submit" variant="primary"> Submit </Button></Link>
                         </form>
                     </CardContent>
                 </Card>
