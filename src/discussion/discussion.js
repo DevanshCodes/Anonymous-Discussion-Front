@@ -10,7 +10,7 @@ class Discussion extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            endpoint: "https://anonymous-project-backend.herokuapp.com:4000",
+            endpoint: 'https://anonymous-project-backend.herokuapp.com/',
             message: '',
             messages: [
                 {
@@ -21,30 +21,25 @@ class Discussion extends Component {
             ],
 
         };
-        socket = socketIOClient.connect(this.state.endpoint)
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        socket = socketIOClient.connect(this.state.endpoint)
         socket.on('newChat', async (data) => {
             var tmessages = this.state.messages;
             tmessages.push({ username: data.username, chat: data.chat })
             this.setState({ messages: tmessages });
-
         })
 
     }
 
     componentDidMount() {
         const { match: { params } } = this.props;
-        fetch(`https://anonymous-project-backend.herokuapp.com/api/chats/${params.roomno}`)
-            .then(response => response.json())
-            .then((data) => {
-                console.log(data);
-                this.setState({ messages: data })
-            });
-            console.log(params);
-            socket.on('connect', function() {
-                socket.emit('room', params.roomno);
-             });
+        socket.on('connect', function () {
+            socket.emit('room', params.roomno);
+        });
+        socket.on('chats', (chats) => {
+            this.setState({ messages: chats });
+        })
     }
 
     componentDidUpdate() {
