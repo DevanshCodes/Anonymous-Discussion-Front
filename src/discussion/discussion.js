@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./discussion.scss";
 import socketIOClient from "socket.io-client";
 import { Paper, Container } from '@material-ui/core';
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import { Button, InputGroup, FormControl, Spinner } from 'react-bootstrap';
 
 var socket;
 
@@ -10,6 +10,7 @@ class Discussion extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            isloading: true,
             endpoint: 'https://anonymous-project-backend.herokuapp.com/',
             message: '',
             messages: [
@@ -39,6 +40,7 @@ class Discussion extends Component {
         });
         socket.on('chats', (chats) => {
             this.setState({ messages: chats });
+            this.setState({isloading:false})
         })
     }
 
@@ -63,7 +65,7 @@ class Discussion extends Component {
                 <Container maxWidth="lg">
                     <h1>Anonymous Discussion!</h1>
                     <div> <Paper variant="outlined" className="paper" id="chatscroll">
-                        {this.state.messages.map(i => {
+                        {this.state.isloading ? <Spinner animation="border" variant="primary" variant="primary" className="spinner"/> : this.state.messages.map(i => {
                             return (
                                 <div className="chat">
                                     <div className="Avatar"></div>

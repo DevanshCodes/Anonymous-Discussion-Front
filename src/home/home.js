@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import "./home.scss";
-import { Card, CardContent, Container, Avatar, Input } from '@material-ui/core';
+import { Card, CardContent, Container, Avatar} from '@material-ui/core';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
 
@@ -59,6 +59,9 @@ class Home extends Component {
                         </form>
                     </CardContent>
                 </Card>
+                <Container maxWidth="md">
+                <Button>DevanshCodes</Button>
+                </Container>
             </div>
         )
     }
