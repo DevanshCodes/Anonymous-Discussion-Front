@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Anonymous-Discussion-Front/precache-manifest.be0c43cddfd8d72ad072191e78a08dd5.js"
+  "/Anonymous-Discussion-Front/precache-manifest.a8bcf7a74e01caa43fd94c537e239c3f.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/Anonymous-Discussion-Front/static/css/main.71a3214a.chunk.css",
-    "main.js": "/Anonymous-Discussion-Front/static/js/main.c0da6bbd.chunk.js",
-    "main.js.map": "/Anonymous-Discussion-Front/static/js/main.c0da6bbd.chunk.js.map",
+    "main.css": "/Anonymous-Discussion-Front/static/css/main.2ad7949f.chunk.css",
+    "main.js": "/Anonymous-Discussion-Front/static/js/main.f139f253.chunk.js",
+    "main.js.map": "/Anonymous-Discussion-Front/static/js/main.f139f253.chunk.js.map",
     "runtime-main.js": "/Anonymous-Discussion-Front/static/js/runtime-main.243980ad.js",
     "runtime-main.js.map": "/Anonymous-Discussion-Front/static/js/runtime-main.243980ad.js.map",
     "static/css/2.69121389.chunk.css": "/Anonymous-Discussion-Front/static/css/2.69121389.chunk.css",
     "static/js/2.be90a6e1.chunk.js": "/Anonymous-Discussion-Front/static/js/2.be90a6e1.chunk.js",
     "static/js/2.be90a6e1.chunk.js.map": "/Anonymous-Discussion-Front/static/js/2.be90a6e1.chunk.js.map",
     "index.html": "/Anonymous-Discussion-Front/index.html",
-    "precache-manifest.be0c43cddfd8d72ad072191e78a08dd5.js": "/Anonymous-Discussion-Front/precache-manifest.be0c43cddfd8d72ad072191e78a08dd5.js",
+    "precache-manifest.a8bcf7a74e01caa43fd94c537e239c3f.js": "/Anonymous-Discussion-Front/precache-manifest.a8bcf7a74e01caa43fd94c537e239c3f.js",
     "service-worker.js": "/Anonymous-Discussion-Front/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/Anonymous-Discussion-Front/static/css/2.69121389.chunk.css.map",
-    "static/css/main.71a3214a.chunk.css.map": "/Anonymous-Discussion-Front/static/css/main.71a3214a.chunk.css.map",
-    "static/js/2.be90a6e1.chunk.js.LICENSE.txt": "/Anonymous-Discussion-Front/static/js/2.be90a6e1.chunk.js.LICENSE.txt"
+    "static/css/main.2ad7949f.chunk.css.map": "/Anonymous-Discussion-Front/static/css/main.2ad7949f.chunk.css.map",
+    "static/js/2.be90a6e1.chunk.js.LICENSE.txt": "/Anonymous-Discussion-Front/static/js/2.be90a6e1.chunk.js.LICENSE.txt",
+    "static/media/github.4b017053.svg": "/Anonymous-Discussion-Front/static/media/github.4b017053.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.243980ad.js",
     "static/css/2.69121389.chunk.css",
     "static/js/2.be90a6e1.chunk.js",
-    "static/css/main.71a3214a.chunk.css",
-    "static/js/main.c0da6bbd.chunk.js"
+    "static/css/main.2ad7949f.chunk.css",
+    "static/js/main.f139f253.chunk.js"
   ]
 }
