@@ -60,7 +60,6 @@ class Home extends Component {
                     </CardContent>
                 </Card>
                 <Container maxWidth="md">
-                <Button>DevanshCodes</Button>
                 </Container>
             </div>
         )
